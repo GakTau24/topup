@@ -5,7 +5,7 @@ import { BsWhatsapp } from 'react-icons/bs';
 
 
 export const metadata = {
-  title: `Store - ${process.env.siteName}`,
+  title: `Store -`,
   description: 'top-up game, harga murah, proses cepat, bonus menarik, beli game online',
   keywords: 
   ['top-up game',
