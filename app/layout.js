@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: {
     default: process.env.siteName,
-    template: `%s | ${process.env.siteName}`,
+    template: `%s ${process.env.siteName}`,
   },
   description:
     "top-up game, harga murah, proses cepat, bonus menarik, beli game online",
