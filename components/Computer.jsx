@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 async function getpcGames() {
-    const res = await fetch(`${process.env.baseURL}/pcgames`)
+    const res = await fetch(`${process.env.baseURL}/pcgames`, { cache: 'no-store' })
     return res.json()
 }
 
