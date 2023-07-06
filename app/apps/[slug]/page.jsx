@@ -22,7 +22,7 @@ export const metadata = {
 
 
 async function getDetailData(slug) {
-  const detailData = await fetch(`${process.env.baseURL}/apps/${slug}`)
+  const detailData = await fetch(`${process.env.baseURL}/apps/${slug}`, { cache: 'no-store' })
   return detailData.json()
 }
 
