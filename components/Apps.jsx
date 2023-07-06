@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 async function getApps() {
-    const res = await fetch(`${process.env.baseURL}/apps`)
+    const res = await fetch(`${process.env.baseURL}/apps`, { cache: 'no-store' })
     return res.json()
 }
 
