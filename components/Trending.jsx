@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 async function getTrending() {
-    const res = await fetch(`${process.env.baseURL}/trending`)
+    const res = await fetch(`${process.env.baseURL}/trending`, { cache: 'no-store' })
     return res.json()
 }
 
