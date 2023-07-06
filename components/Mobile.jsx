@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 async function getMobileGames() {
-    const res = await fetch(`${process.env.baseURL}/mobilegames`)
+    const res = await fetch(`${process.env.baseURL}/mobilegames`, { cache: 'no-store' })
     return res.json()
 }
 
