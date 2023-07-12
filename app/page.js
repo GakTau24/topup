@@ -9,6 +9,7 @@ export const metadata = {
   description: 'top-up game, harga murah, proses cepat, bonus menarik, beli game online',
   keywords: 
   ['top-up game',
+   'reyvin store',
     'topup mobile legends', 
     'topup pubg mobile', 
     'topup free fire', 
