@@ -12,6 +12,7 @@ export async function generateMetadata({params, searchParams}, parent) {
         openGraph: {
             images: [product.img, ...previousImages]
         },
+        description: product.price
     }
 }
 
