@@ -6,18 +6,6 @@ import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: {
-    default: process.env.siteName,
-    template: `%s ${process.env.siteName}`,
-  },
-  description:
-    "top-up game, harga murah, proses cepat, bonus menarik, beli game online",
-  keywords:
-    "top-up game, harga murah, proses cepat, bonus menarik, beli game online, topup mobile legends, topup free fire, topup pubg mobile. topup valorant",
-  author: "unipin, codashop, dunia games",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
