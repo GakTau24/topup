@@ -8,7 +8,7 @@ export async function generateMetadata({params, searchParams}, parent) {
     const product = await fetch(`${process.env.baseURL}/trending/${slug}`, { cache: 'no-store' }).then((res) =>res.json())
     const previousImages = (await parent).openGraph?.images || []
     return {
-        title: product.title,
+        title: [`${product.title} - ReyvinStore`],
         openGraph: {
             images: [product.img, ...previousImages]
         },
