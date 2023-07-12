@@ -3,20 +3,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BsWhatsapp } from 'react-icons/bs';
 
-export const metadata = {
-  title: `Store -`,
-  description: 'top-up game, harga murah, proses cepat, bonus menarik, beli game online',
-  keywords: 
-  ['top-up game',
-    'topup mobile legends', 
-    'topup pubg mobile', 
-    'topup free fire', 
-    'topup valorant',
-    'unipin',
-    'codashop',
-    'dunia games',],
-  author: ['unipin', 'codashop', 'dunia games', 'reyvin store'],
-  ogImage: [`${process.env.baseURL}/assets/Logo.png`]
+export async function generateMetadata({params, searchParams}, parent) {
+    const slug = params.slug
+    const product = await fetch(`${process.env.baseURL}/trending/${slug}`, { cache: 'no-store' }).then((res) =>res.json())
+    const previousImages = (await parent).openGraph?.images || []
+    return {
+        title: `${product.title} - ReyvinStore`,
+        openGraph: {
+            images: [product.img, ...previousImages]
+        },
+        description: product.price
+    }
 }
 
 
@@ -25,7 +22,7 @@ async function getDetailData(slug) {
   return detailData.json()
 }
 
-export default async function page({ params }) {
+export default async function page({ params, searchParams }) {
   const game = await getDetailData(params.slug)
   return (
     <div className="flex justify-center items-center py-3">
