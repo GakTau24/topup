@@ -6,20 +6,21 @@ import Apps from "@/components/Apps"
 
 export const metadata = {
   title: `Topup Games - ${process.env.siteName}`,
-  description: 'top-up game, harga murah, proses cepat, bonus menarik, beli game online',
-  keywords: 
-  ['top-up game',
-   'reyvin store',
-    'topup mobile legends', 
-    'topup pubg mobile', 
-    'topup free fire', 
+  description: 'Top-up game online dengan harga murah dan proses cepat. Dapatkan bonus menarik saat membeli game online di Reyvin Store.',
+  keywords: [
+    'top-up game online',
+    'beli diamond murah',
+    'topup mobile legends',
+    'topup pubg mobile',
+    'topup free fire',
     'topup valorant',
-    'unipin',
-    'codashop',
-    'dunia games',],
+    'topup game termurah',
+    'game voucher',
+    'game online',
+  ],
   author: ['unipin', 'codashop', 'dunia games', 'reyvin store'],
-  ogImage: [`${process.env.baseURL}/assets/Logo.png`]
-}
+  ogImage: [`${process.env.baseURL}/assets/Logo.png`],
+};
 
 
 export default function Home() {
