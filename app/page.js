@@ -22,7 +22,7 @@ export const metadata = {
   openGraph: {
     images: [
       {
-        url: `/public/assets/Logo.png`,
+        url: `/assets/Logo.png`,
         alt: 'Logo Reyvin Store',
       },
     ],
