@@ -19,8 +19,16 @@ export const metadata = {
     'game online',
   ],
   author: ['unipin', 'codashop', 'dunia games', 'reyvin store'],
-  ogImage: [{ url: '/assets/Logo.png' }],
+  openGraph: {
+    images: [
+      {
+        url: `/assets/Logo.png`,
+        alt: 'Logo Reyvin Store',
+      },
+    ],
+  },
 };
+
 
 
 export default function Home() {
