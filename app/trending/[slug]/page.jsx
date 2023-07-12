@@ -5,7 +5,7 @@ import { BsWhatsapp } from 'react-icons/bs';
 
 export async function generateMetadata({params, searchParams}, parent) {
     const slug = params.slug
-    const product = await fetch(`https://reyvin-express.vercel.app/mobilegames/${slug}`, { cache: 'no-store' }).then((res) =>res.json())
+    const product = await fetch(`${process.env.baseURL}/trending/${slug}`, { cache: 'no-store' }).then((res) =>res.json())
     const previousImages = (await parent).openGraph?.images || []
     return {
         title: product.title,
