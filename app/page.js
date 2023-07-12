@@ -19,7 +19,7 @@ export const metadata = {
     'game online',
   ],
   author: ['unipin', 'codashop', 'dunia games', 'reyvin store'],
-  ogImage: [`/assets/Logo.png`],
+  ogImage: [{ url: '/assets/Logo.png' }],
 };
 
 
