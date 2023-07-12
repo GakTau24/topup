@@ -22,7 +22,7 @@ async function getDetailData(slug) {
   return detailData.json()
 }
 
-export default async function page({ params }) {
+export default async function page({ params, searchParams }) {
   const game = await getDetailData(params.slug)
   return (
     <div className="flex justify-center items-center py-3">
